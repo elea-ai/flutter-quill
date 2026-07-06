@@ -363,6 +363,7 @@ class QuillEditorState extends State<QuillEditor>
       return KeyboardListener(
         onKeyEvent: (_) {},
         focusNode: FocusNode(
+          skipTraversal: true,
           onKeyEvent: (node, event) => KeyEventResult.skipRemainingHandlers,
         ),
         child: editor,
